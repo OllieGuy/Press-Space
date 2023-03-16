@@ -1,0 +1,63 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class Chapter1Controller : MonoBehaviour
+{
+    KeyController KC = new KeyController();
+    public GameObject PSBlack;
+    public GameObject PSRed;
+    public Image image;
+    public AudioManager am;
+    int unacceptableKeyCounter = 0;
+    int level = 0;
+
+    void Start()
+    {
+        //KeyCode[] acceptableKeys = { KeyCode.Space };
+        //KC = new KeyController(acceptableKeys);
+        //am = FindObjectOfType<AudioManager>();
+    }
+
+    void Update()
+    {
+        handleInput();
+        handleEvents();
+    }
+
+    void handleInput()
+    {
+        if (Input.anyKeyDown)
+        {
+            for (int i = 0; i < KC.acceptableKeys.Length; i++)
+            {
+                if (!Input.GetKeyDown(KC.acceptableKeys[i]))
+                {
+                    unacceptableKeyCounter++;
+                    Debug.Log(unacceptableKeyCounter);
+                }
+            }
+        }
+    }
+
+    void handleEvents()
+    {
+        if (unacceptableKeyCounter == 5 && level == 0)
+        {
+            GameObject PS = Instantiate(PSBlack,image.transform);
+            level++;
+        }
+        if (unacceptableKeyCounter == 10 && level == 1)
+        {
+            GameObject PS = Instantiate(PSRed, image.transform);
+            level++;
+        }
+        if (unacceptableKeyCounter == 17 && level == 2)
+        {
+            Debug.Log("attempt to audio");
+            am.play("test");
+            level++;
+        }
+    }
+}
