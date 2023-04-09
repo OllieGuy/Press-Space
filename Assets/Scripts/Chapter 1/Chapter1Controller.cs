@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Chapter1Controller : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Chapter1Controller : MonoBehaviour
     public GameObject PSRed;
     public Image image;
     public AudioManager am;
+    int acceptableKeyCounter = 0;
     int unacceptableKeyCounter = 0;
     int level = 0;
 
@@ -35,7 +37,12 @@ public class Chapter1Controller : MonoBehaviour
                 if (!Input.GetKeyDown(KC.acceptableKeys[i]))
                 {
                     unacceptableKeyCounter++;
+                    acceptableKeyCounter = 0;
                     Debug.Log(unacceptableKeyCounter);
+                }
+                else
+                {
+                    acceptableKeyCounter++;
                 }
             }
         }
@@ -43,6 +50,10 @@ public class Chapter1Controller : MonoBehaviour
 
     void handleEvents()
     {
+        if (acceptableKeyCounter >= 25 && level < 3)
+        {
+            SceneManager.LoadScene("Job");
+        }
         if (unacceptableKeyCounter == 5 && level == 0)
         {
             GameObject PS = Instantiate(PSBlack,image.transform);
