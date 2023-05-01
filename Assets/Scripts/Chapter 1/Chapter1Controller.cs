@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,13 +11,14 @@ public class Chapter1Controller : MonoBehaviour
     public GameObject PSBlack;
     public GameObject PSRed;
     public GameObject PFPuppyPlane;
-    public GameObject PFPuppyExplode;
     PuppyExplode PE;
     public Image image;
     public AudioManager am;
     int acceptableKeyCounter = 0;
     int unacceptableKeyCounter = 0;
     int level = 0;
+    GameObject PS;
+    bool enabledInput = true;
 
     void Start()
     {
@@ -33,7 +35,7 @@ public class Chapter1Controller : MonoBehaviour
 
     void handleInput()
     {
-        if (Input.anyKeyDown)
+        if (Input.anyKeyDown && enabledInput)
         {
             for (int i = 0; i < KC.acceptableKeys.Length; i++)
             {
@@ -59,31 +61,60 @@ public class Chapter1Controller : MonoBehaviour
         }
         if (unacceptableKeyCounter == 5 && level == 0)
         {
-            GameObject PS = Instantiate(PSBlack,image.transform);
+            Instantiate(PSBlack,image.transform);
+            StartCoroutine(disableInput(2.5f));
             level++;
         }
         if (unacceptableKeyCounter == 10 && level == 1)
         {
-            GameObject PS = Instantiate(PSRed, image.transform);
+            Instantiate(PSRed, image.transform);
+            StartCoroutine(disableInput(2.5f));
             level++;
         }
         if (unacceptableKeyCounter == 15 && level == 2)
         {
-            GameObject PS = Instantiate(PFPuppyPlane, image.transform);
+            am.play("C1_SFX_Bark");
+            PS = Instantiate(PFPuppyPlane, image.transform);
             PE = PS.GetComponent<PuppyExplode>();
+            StartCoroutine(disableInput(2.5f));
             level++;
         }
         if (unacceptableKeyCounter == 16 && level == 3)
         {
-            Debug.Log("boom boom");
+            StartCoroutine(disableInput(2.5f));
             PE.boom();
             level++;
         }
-        if (unacceptableKeyCounter == 25 && level == 4)
+        if (unacceptableKeyCounter == 17 && level == 4)
         {
-            Debug.Log("attempt to audio");
+            StartCoroutine(disableInput(2.5f));
+            PE.boom();
+            level++;
+        }
+        if (unacceptableKeyCounter == 18 && level == 5)
+        {
+            StartCoroutine(disableInput(2.5f));
+            Debug.Log(PS);
+            PE.boom();
+            Destroy(PS);
+            StartCoroutine(puppyCleanUp());
+            level++;
+        }
+        if (unacceptableKeyCounter == 25 && level == 6)
+        {
             am.play("test");
             level++;
         }
+    }
+    IEnumerator puppyCleanUp()
+    {
+        yield return new WaitForSeconds(1.5f);
+        Destroy(GameObject.Find("PuppyBoom(Clone)"));
+    }
+    IEnumerator disableInput(float time)
+    {
+        enabledInput = false;
+        yield return new WaitForSeconds(time);
+        enabledInput = true;
     }
 }

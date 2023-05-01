@@ -7,6 +7,7 @@ using System.Collections.Generic;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
+    private IEnumerator coroutineLoop;
     void Awake()
     {
         foreach (Sound s in sounds)
@@ -25,12 +26,20 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
         return s.source.clip.length;
     }
+
     public void playOnLoop(string name, float offset)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         s.source.Play();
-        Debug.Log("loop reached");
-        StartCoroutine(looper(s, offset));
+        coroutineLoop = looper(s, offset);
+        StartCoroutine(coroutineLoop);
+    }
+
+    public void breakLoop(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        s.source.Stop();
+        StopCoroutine(coroutineLoop);
     }
     IEnumerator looper(Sound s, float offset)
     {
@@ -40,7 +49,7 @@ public class AudioManager : MonoBehaviour
         {
             if (timer > (lenthOfClip - offset))
             {
-                Debug.Log("loooooop");
+                Debug.Log("loop");
                 s.source.Play();
                 timer = 0;
             }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityEngine.GraphicsBuffer;
 
 public class GardenController : MonoBehaviour
 {
@@ -37,13 +38,11 @@ public class GardenController : MonoBehaviour
             {
                 if (!lr)
                 {
-                    Debug.Log("play 1");
                     am.play("Gard_SFX_Grass_Walk");
                     lr = true;
                 }
                 else
                 {
-                    Debug.Log("play 2");
                     am.play("Gard_SFX_Grass_Walk_2");
                     lr = false;
                 }

@@ -440,6 +440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   am: {fileID: 1600357837}
+  doneTyping: 0
 --- !u!1 &1568606695
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,8 +555,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: keyboardClicks
-    clip: {fileID: 8300000, guid: 0c50ce10124d3e541ab5f932c9a180ba, type: 3}
+  - name: Job_SFX_Type
+    clip: {fileID: 8300000, guid: 99fa95e2e94d2504a96b456101570e04, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
@@ -635,12 +636,22 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Dear Player,
 
+    
 
-    Congratulations on passing the job interview. It is
-    with great...
+    We are writing to inform you that you have been
+    selected as the lucky individual to press the space button all day, every day,
+    forever. Don''t get too excited, though; we were hoping for someone with a bit
+    more experience in this area, but we''ll make do with what we have.
 
 
-    Sincerely,
+    We
+    hope that you accept this offer and join our team of space bar experts. If you
+    have any questions or concerns, please don''t reach out. We don''t care that
+    much.
+
+    
+
+    Toodle-pip,
 
     Management'
   m_isRightToLeft: 0

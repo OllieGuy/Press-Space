@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9641c6becc0fb3b4c94b01f06a36b4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExplosionPlane: {fileID: 8597564838785262036, guid: cb7652ffc70760c4cb146a2577c153ed, type: 3}
+  ExplosionPlane: {fileID: 7736517173579055852, guid: ddc1d220abd111d4c8a85a4a0aada926, type: 3}
 --- !u!64 &5100823120216238024
 MeshCollider:
   m_ObjectHideFlags: 0
