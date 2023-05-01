@@ -488,8 +488,8 @@ GameObject:
   - component: {fileID: 378287742}
   - component: {fileID: 378287741}
   - component: {fileID: 378287740}
-  - component: {fileID: 378287744}
   - component: {fileID: 378287745}
+  - component: {fileID: 378287746}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -576,21 +576,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &378287744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 378287739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67780f19750ca6343bd778ad9c40ba86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  mouseSensitivity: 100
-  playerCamera: {fileID: 1854931182}
 --- !u!54 &378287745
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -607,6 +592,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &378287746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378287739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ab55407ffdb2f4c8e59887d3bdad12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  jumpForce: 1
+  groundDistance: 0.4
+  platformCamera: {fileID: 0}
+  walledCamera: {fileID: 0}
+  chapter2Controller: {fileID: 0}
 --- !u!1001 &414959454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2620,7 +2623,6 @@ GameObject:
   - component: {fileID: 1854931183}
   - component: {fileID: 1854931182}
   - component: {fileID: 1854931181}
-  - component: {fileID: 1854931184}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2686,29 +2688,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854931180}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.219, y: 1.948, z: -1.643}
+  m_LocalRotation: {x: 0.17353448, y: -0.3541038, z: 0.067046516, w: 0.91651577}
+  m_LocalPosition: {x: 3.308, y: 2.923, z: -7.273}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1854931184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1854931180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33814688eb470bd47baec72b145664d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sensitivity: 2
-  yRotationLimit: 88
-  player: {fileID: 378287739}
+  m_LocalEulerAnglesHint: {x: 21.443, y: -42.249, z: 0}
 --- !u!1001 &1876354574
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,6 +9,9 @@ public class Chapter1Controller : MonoBehaviour
     KeyController KC = new KeyController();
     public GameObject PSBlack;
     public GameObject PSRed;
+    public GameObject PFPuppyPlane;
+    public GameObject PFPuppyExplode;
+    PuppyExplode PE;
     public Image image;
     public AudioManager am;
     int acceptableKeyCounter = 0;
@@ -64,7 +67,19 @@ public class Chapter1Controller : MonoBehaviour
             GameObject PS = Instantiate(PSRed, image.transform);
             level++;
         }
-        if (unacceptableKeyCounter == 17 && level == 2)
+        if (unacceptableKeyCounter == 15 && level == 2)
+        {
+            GameObject PS = Instantiate(PFPuppyPlane, image.transform);
+            PE = PS.GetComponent<PuppyExplode>();
+            level++;
+        }
+        if (unacceptableKeyCounter == 16 && level == 3)
+        {
+            Debug.Log("boom boom");
+            PE.boom();
+            level++;
+        }
+        if (unacceptableKeyCounter == 25 && level == 4)
         {
             Debug.Log("attempt to audio");
             am.play("test");

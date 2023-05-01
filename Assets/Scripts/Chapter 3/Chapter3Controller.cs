@@ -9,12 +9,17 @@ public class Chapter3Controller : MonoBehaviour
     public int level = 0;
     public ParticleSystem ps;
     public GameObject player;
+    public GameObject computer;
+    public GameObject computerStand;
+    FillScreen fsPlayer;
     int unacceptableKeyCounter = 0;
 
     void Start()
     {
         StartCoroutine(footstepSounds());
-        //firstCam.enabled = true;
+        StartCoroutine(computerSpawnIn());
+        am.playOnLoop("C3_SFX_Void",0.7f);
+        fsPlayer = player.GetComponent<FillScreen>();
     }
 
     void Update()
@@ -26,17 +31,6 @@ public class Chapter3Controller : MonoBehaviour
 
     void handleInput()
     {
-        //if (Input.anyKeyDown)
-        //{
-        //    for (int i = 0; i < KC.acceptableKeys.Length; i++)
-        //    {
-        //        if (!Input.GetKeyDown(KC.acceptableKeys[i]))
-        //        {
-        //            unacceptableKeyCounter++;
-        //            Debug.Log(unacceptableKeyCounter);
-        //        }
-        //    }
-        //}
     }
 
     void handleEvents()
@@ -56,11 +50,25 @@ public class Chapter3Controller : MonoBehaviour
             timer += Time.deltaTime;
             if (timer > 1f && Vector3.Distance(prevPos, player.transform.position) > 2)
             {
-                am.play("test");
+                //am.play("test");
                 prevPos = player.transform.position;
                 timer -= 1f;
             }
             yield return null;
         }
+    }
+
+    IEnumerator computerSpawnIn()
+    {
+        yield return new WaitForSeconds(2);
+        am.play("C3_SFX_Computer_On");
+        yield return new WaitForSeconds(0.8f);
+        computer.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        am.play("C3_SFX_Computer_Off");
+        yield return new WaitForSeconds(2f);
+        computer.SetActive(false);
+        computerStand.SetActive(false);
+        fsPlayer.inRangeOfComputer = false;
     }
 }
