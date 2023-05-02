@@ -24,6 +24,7 @@ public class AudioManager : MonoBehaviour
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         s.source.Play();
+        Debug.Log(name);
         return s.source.clip.length;
     }
 
@@ -49,7 +50,6 @@ public class AudioManager : MonoBehaviour
         {
             if (timer > (lenthOfClip - offset))
             {
-                Debug.Log("loop");
                 s.source.Play();
                 timer = 0;
             }

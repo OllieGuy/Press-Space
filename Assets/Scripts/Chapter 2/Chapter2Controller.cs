@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
@@ -9,12 +10,17 @@ public class Chapter2Controller : MonoBehaviour
     public AudioManager am;
     public int level = 0;
     public GameObject player;
+    public GameObject gardenTriggerBox;
     public Camera platformCamera;
     public Camera walledCamera;
     public Camera fpCamera;
     private Rigidbody rb;
     private Player3rdPersonController p3c;
     private Player1stPersonMovement p1m;
+    private GardenEnter ge;
+    private bool spaceOnFrame = false;
+    private bool currentSoundPlay = false;
+    private IEnumerator currentCoroutine;
 
     void Start()
     {
@@ -23,12 +29,21 @@ public class Chapter2Controller : MonoBehaviour
         fpCamera.enabled = false;
         platformCamera.enabled = true;
         rb = player.GetComponent<Rigidbody>();
+        ge = player.GetComponent<GardenEnter>();
         p3c = player.GetComponent<Player3rdPersonController>();
         p1m = player.GetComponent<Player1stPersonMovement>();
     }
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            spaceOnFrame = true;
+        }
+        else
+        {
+            spaceOnFrame = false;
+        }
         handleEvents();
     }
 
@@ -41,36 +56,64 @@ public class Chapter2Controller : MonoBehaviour
         switch (level)
         {
             case 0:
-                level++;
+                StartCoroutine(playAndWaitToLevelUp("C2_Narr_First_Island_Intro"));
                 break;
             case 1:
-                if (player.transform.position.y < 80f)
+                if (player.transform.position.x != 0 || player.transform.position.z != 0)
                 {
+                    am.play("C2_Narr_First_Island_Moves");
                     level++;
-                    SpawnOnWalledPlatform();
                 }
                 break;
             case 2:
+                if (player.transform.position.y < 80f)
+                {
+                    StartCoroutine(playAndWaitToLevelUp("C2_Narr_Falls_Off_First_Island"));
+                }
+                break;
+            case 3:
+                SpawnOnWalledPlatform();
+                currentCoroutine = preparingPrison();
+                StartCoroutine(currentCoroutine);
+                level++;
+                break;
+            case 4:
                 if (player.transform.position.y < 50f)
                 {
+                    StopCoroutine(currentCoroutine);
+                    am.play("C2_Narr_Falls_Off_Second_Island");
                     level++;
                     p3c.enabled = false;
                     p1m.enabled = true;
                     SpawnInRoom();
                 }
                 break;
-            case 3:
+            case 5:
+                StartCoroutine(preparingGarden());
+                level++;
+                break;
+            case 6:
+                Debug.Log("chapter 6");
                 if (player.transform.position.y < 0f)
                 {
-                    level++;
-                    SceneManager.LoadScene("Garden");
+                    StartCoroutine(playAndWaitToLevelUp("C2_Narr_Player_Hidden_Exit"));
                 }
+                if (ge.inRangeOfGarden && (player.transform.rotation.y > 0.9 || player.transform.position.y < 0.6))
+                {
+                    Debug.Log("prep garden");
+                    if (spaceOnFrame)
+                    {
+                        SceneManager.LoadScene("Garden");
+                    }
+                }
+                break;
+            case 7:
+                SceneManager.LoadScene("Chapter 3");
                 break;
             default:
                 break;
         }
     }
-
     private void SpawnOnWalledPlatform()
     {
         platformCamera.enabled = false;
@@ -87,7 +130,41 @@ public class Chapter2Controller : MonoBehaviour
         fpCamera.enabled = true;
         fpCamera.GetComponent<AudioListener>().enabled = true;
         fpCamera.GetComponent<FirstPersonCamera>().enabled = true;
-        player.transform.position = new Vector3(0f, 2f, 0f);
+        player.transform.position = new Vector3(-0.15f, 2f, -5.5f);
+        fpCamera.transform.rotation = new Quaternion(0,0,0,0);
+        player.transform.rotation = new Quaternion(0, 0, 0, 0);
         rb.velocity = Vector3.zero;
+    }
+    IEnumerator playAndWaitToLevelUp(string soundToPlay)
+    {
+        if (!currentSoundPlay)
+        {
+            p3c.enabled = false;
+            currentSoundPlay = true;
+            yield return new WaitForSeconds(am.play(soundToPlay));
+            p3c.enabled = true;
+            currentSoundPlay = false;
+            level++;
+        }
+    }
+
+    IEnumerator preparingPrison()
+    {
+        am.play("C2_Narr_Second_Island_Intro");
+        yield return new WaitForSeconds(20);
+        am.play("C2_Narr_20_Seconds_Elapsed");
+        yield return new WaitForSeconds(10);
+        am.play("C2_Narr_Taking_To_Prison");
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("Prison");
+    }
+    IEnumerator preparingGarden()
+    {
+        am.play("C2_Narr_Room_Intro");
+        yield return new WaitForSeconds(15);
+        am.play("C2_Narr_Nearly_Ready");
+        yield return new WaitForSeconds(5);
+        am.play("C2_Narr_Invitation");
+        gardenTriggerBox.SetActive(true);
     }
 }

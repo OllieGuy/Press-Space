@@ -392,6 +392,41 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
+  - name: C3_SFX_Step
+    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: C3_Narr_Intro
+    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: C3_Narr_Instructions
+    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: C3_Narr_Plead
+    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: C3_Narr_Last_Chance
+    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: C3_Narr_Thank
+    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: C3_Narr_Final_Monologue
+    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
 --- !u!4 &479899755
 Transform:
   m_ObjectHideFlags: 0
@@ -9267,9 +9302,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042e36eb77ed0184d9270fdfdffb0d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  am: {fileID: 479899754}
   inRangeOfComputer: 0
   whiteToFade: {fileID: 794635216}
   whiteOnCanvasImg: {fileID: 678923746}
+  c3c: {fileID: 283340713}
 --- !u!1 &1710559267
 GameObject:
   m_ObjectHideFlags: 0

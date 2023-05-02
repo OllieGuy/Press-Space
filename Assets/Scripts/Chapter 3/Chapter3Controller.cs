@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class Chapter3Controller : MonoBehaviour
 {
-    KeyController KC = new KeyController();
     public AudioManager am;
     public int level = 0;
     public ParticleSystem ps;
     public GameObject player;
     public GameObject computer;
     public GameObject computerStand;
-    FillScreen fsPlayer;
-    int unacceptableKeyCounter = 0;
+    private FillScreen fsPlayer;
+    private bool levelInProgress = false;
 
     void Start()
     {
         StartCoroutine(footstepSounds());
-        StartCoroutine(computerSpawnIn());
         am.playOnLoop("C3_SFX_Void",0.7f);
         fsPlayer = player.GetComponent<FillScreen>();
     }
@@ -25,19 +23,27 @@ public class Chapter3Controller : MonoBehaviour
     void Update()
     {
         ps.transform.position = player.transform.position;
-        handleInput();
         handleEvents();
-    }
-
-    void handleInput()
-    {
     }
 
     void handleEvents()
     {
-        if (unacceptableKeyCounter == 5 && level == 0)
+        switch (level)
         {
-            Debug.Log("asdf");
+            case 0:
+                StartCoroutine(computerSpawnIn());
+                levelInProgress = true;
+                break;
+            case 1:
+                StartCoroutine(breakdown());
+                levelInProgress = true;
+                break;
+            case 2:
+                StartCoroutine(removeComputer());
+                levelInProgress = true;
+                break;
+            default:
+                break;
         }
     }
 
@@ -48,11 +54,11 @@ public class Chapter3Controller : MonoBehaviour
         while (true)
         {
             timer += Time.deltaTime;
-            if (timer > 1f && Vector3.Distance(prevPos, player.transform.position) > 2)
+            if (timer > 0.3f && Vector3.Distance(prevPos, player.transform.position) > 2)
             {
-                //am.play("test");
+                am.play("C3_SFX_Step");
                 prevPos = player.transform.position;
-                timer -= 1f;
+                timer -= 0.3f;
             }
             yield return null;
         }
@@ -60,15 +66,45 @@ public class Chapter3Controller : MonoBehaviour
 
     IEnumerator computerSpawnIn()
     {
-        yield return new WaitForSeconds(2);
-        am.play("C3_SFX_Computer_On");
-        yield return new WaitForSeconds(0.8f);
-        computer.SetActive(true);
-        yield return new WaitForSeconds(5f);
-        am.play("C3_SFX_Computer_Off");
-        yield return new WaitForSeconds(2f);
-        computer.SetActive(false);
-        computerStand.SetActive(false);
-        fsPlayer.inRangeOfComputer = false;
+        if (!levelInProgress)
+        {
+            yield return new WaitForSeconds(am.play("C3_Narr_Intro"));
+            yield return new WaitForSeconds(2);
+            am.play("C3_SFX_Computer_On");
+            yield return new WaitForSeconds(0.8f);
+            computer.SetActive(true);
+            yield return new WaitForSeconds(2.5f);
+            yield return new WaitForSeconds(am.play("C3_Narr_Instructions"));
+            levelInProgress = false;
+            level++;
+        }
     }
+    IEnumerator breakdown()
+    {
+        if (!levelInProgress)
+        {
+            yield return new WaitForSeconds(15f);
+            yield return new WaitForSeconds(am.play("C3_Narr_Plead"));
+            yield return new WaitForSeconds(15f);
+            yield return new WaitForSeconds(am.play("C3_Narr_Last_Chance"));
+            yield return new WaitForSeconds(10f);
+            levelInProgress = false;
+            level++;
+        }
+    }
+    IEnumerator removeComputer()
+    {
+        if (!levelInProgress)
+        {
+            am.play("C3_SFX_Computer_Off");
+            yield return new WaitForSeconds(2f);
+            computer.SetActive(false);
+            computerStand.SetActive(false);
+            fsPlayer.inRangeOfComputer = false;
+            yield return new WaitForSeconds(am.play("C3_Narr_Final_Monologue"));
+            levelInProgress = false;
+            level++;
+        }
+    }
+        
 }
