@@ -8,7 +8,6 @@ public class GardenController : MonoBehaviour
 {
     public AudioManager am;
     public GameObject player;
-    int level = 0;
 
     void Start()
     {
