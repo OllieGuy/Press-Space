@@ -7,6 +7,7 @@ TagManager:
   - CompTrigger
   - BenchTrigger
   - GardenTrigger
+  - BedTrigger
   layers:
   - Default
   - TransparentFX
