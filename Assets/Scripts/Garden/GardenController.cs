@@ -8,11 +8,15 @@ public class GardenController : MonoBehaviour
 {
     public AudioManager am;
     public GameObject player;
+    private IEnumerator currentCoroutine;
+    private bool benchSitActive = false;
 
     void Start()
     {
         StartCoroutine(footstepSounds());
         am.playOnLoop("Gard_SFX_Ambient", 0.1f);
+        currentCoroutine = gardenTalk();
+        StartCoroutine(currentCoroutine);
     }
 
     void Update()
@@ -22,7 +26,35 @@ public class GardenController : MonoBehaviour
 
     void handleEvents()
     {
-        
+        if(player.GetComponent<BenchSit>().sat)
+        {
+            StopCoroutine(currentCoroutine);
+            StartCoroutine(benchSatOn());
+            benchSitActive = true;
+        }
+    }
+
+    IEnumerator gardenTalk()
+    {
+        yield return new WaitForSeconds(am.play("Gard_Narr_Intro"));
+        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(am.play("Gard_Narr_Idle"));
+        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(am.play("Gard_Narr_Idle_2"));
+        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(am.play("Gard_Narr_Idle_3"));
+    }
+
+    IEnumerator benchSatOn()
+    {
+        if (!benchSitActive)
+        {
+            yield return new WaitForSeconds(am.play("Gard_Narr_Sat"));
+            yield return new WaitForSeconds(2.5f);
+            yield return new WaitForSeconds(am.play("Gard_Narr_Monologue"));
+            yield return new WaitForSeconds(5f);
+            SceneManager.LoadScene("Chapter 1");
+        }
     }
 
     IEnumerator footstepSounds()

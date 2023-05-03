@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class BenchSit : MonoBehaviour
 {
+    public bool sat = false;
     public bool inRangeOfBench = false;
     public Transform satOnBench;
     Rigidbody rb;
@@ -44,6 +45,7 @@ public class BenchSit : MonoBehaviour
 
     void benchSit()
     {
+        sat = true;
         StartCoroutine(moveToPosition(2f));
     }
 

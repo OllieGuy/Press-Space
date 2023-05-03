@@ -22,6 +22,7 @@ public class PrisonController : MonoBehaviour
         currentCoroutine = prison();
         StartCoroutine(currentCoroutine);
         currentlyInRoutine = true;
+        am.playOnLoop("Pris_SFX_Ambient",0.5f);
     }
 
     void Update()

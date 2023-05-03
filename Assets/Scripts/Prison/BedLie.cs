@@ -48,11 +48,13 @@ public class BedLie : MonoBehaviour
     {
         float singleStep = speed * Time.deltaTime;
         var currentPos = transform.position;
+        var currentRot = transform.rotation;
         var t = 0f;
         while (t < 1)
         {
             t += Time.deltaTime / timeToMove;
             transform.position = Vector3.Lerp(currentPos, layOnBed.position, t);
+            transform.rotation = Quaternion.Lerp(currentRot, layOnBed.rotation, t);
             yield return null;
         }
     }

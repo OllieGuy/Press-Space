@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 1896d27f4dfc9f74397ce6be63ebe692, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -636,20 +636,19 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Dear Player,
 
-    
-
-    We are writing to inform you that you have been
-    selected as the lucky individual to press the space button all day, every day,
-    forever. Don''t get too excited, though; we were hoping for someone with a bit
-    more experience in this area, but we''ll make do with what we have.
 
 
-    We
-    hope that you accept this offer and join our team of space bar experts. If you
-    have any questions or concerns, please don''t reach out. We don''t care that
-    much.
+    We are writing to inform you that you have been selected
+    as the lucky individual to press the space button all day, every day, forever.
+    Don''t get too excited, though; we were hoping for someone with a bit more experience
+    in this area, but we''ll make do with what we have.
 
-    
+
+    We hope that you accept
+    this offer and join our team of space bar experts. If you have any questions
+    or concerns, please don''t reach out. We don''t care that much.
+
+
 
     Toodle-pip,
 

@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 0fc454f09c2f00c48b2be6eb83cfd9aa, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -2692,6 +2692,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 560653774}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &608957298
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 678149650}
+    m_Modifications:
+    - target: {fileID: 1739176662596396, guid: 81f51ec42d5c7784aa8e8d5298eddaa0, type: 3}
+      propertyPath: m_Name
+      value: Mountains (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703823074467580, guid: 81f51ec42d5c7784aa8e8d5298eddaa0, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703823074467580, guid: 81f51ec42d5c7784aa8e8d5298eddaa0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 111.7022
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703823074467580, guid: 81f51ec42d5c7784aa8e8d5298eddaa0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703823074467580, guid: 81f51ec42d5c7784aa8e8d5298eddaa0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 43.917168
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703823074467580, guid: 81f51ec42d5c7784aa8e8d5298eddaa0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9267907
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703823074467580, guid: 81f51ec42d5c7784aa8e8d5298eddaa0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703823074467580, guid: 81f51ec42d5c7784aa8e8d5298eddaa0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.37557834
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703823074467580, guid: 81f51ec42d5c7784aa8e8d5298eddaa0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703823074467580, guid: 81f51ec42d5c7784aa8e8d5298eddaa0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703823074467580, guid: 81f51ec42d5c7784aa8e8d5298eddaa0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -39.462
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703823074467580, guid: 81f51ec42d5c7784aa8e8d5298eddaa0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 81f51ec42d5c7784aa8e8d5298eddaa0, type: 3}
 --- !u!1001 &611839206
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5047,6 +5104,36 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Gard_SFX_Grass_Walk_2
     clip: {fileID: 8300000, guid: 7756d755eaa1d44409480fa30de80759, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Gard_Narr_Intro
+    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Gard_Narr_Idle
+    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Gard_Narr_Idle_2
+    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Gard_Narr_Idle_3
+    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Gard_Narr_Sat
+    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Gard_Narr_Monologue
+    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
@@ -9408,7 +9495,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!114 &1883121686
 MonoBehaviour:
@@ -9422,6 +9509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5ad09e3fe427dd48a2586c51efe82a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sat: 0
   inRangeOfBench: 0
   satOnBench: {fileID: 1963895082}
 --- !u!1001 &1886789979
