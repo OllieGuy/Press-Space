@@ -17,6 +17,11 @@ public class EvilController : MonoBehaviour
     bool enabledInput = true;
     int levelReps = 0;
 
+
+    void Start()
+    {
+        am.playOnLoop("Evil_SFX_Ambience", 0.3f);
+    }
     void Update()
     {
         handleInput();
@@ -46,7 +51,7 @@ public class EvilController : MonoBehaviour
     void handleEvents()
     {
 
-        if (acceptableKeyCounter == 10)
+        if (acceptableKeyCounter == 250)
         {
             StartCoroutine(beatenEvil());
         }
@@ -68,6 +73,7 @@ public class EvilController : MonoBehaviour
                     {
                         case 0:
                             Instantiate(PSEvil, image.transform);
+                            am.play("Evil_SFX_Ominous_Thud");
                             StartCoroutine(disableInput(2.5f));
                             levelReps++;
                             break;
@@ -106,7 +112,7 @@ public class EvilController : MonoBehaviour
         float time = am.play("Evil_Narr_Reach250");
         enabledInput = false;
         yield return new WaitForSeconds(am.play("Evil_Narr_Reach250"));
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         SceneManager.LoadScene("Chapter 1");
     }
 }

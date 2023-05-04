@@ -74,7 +74,9 @@ public class PrisonController : MonoBehaviour
             yield return new WaitForSeconds(am.play("Pris_Narr_Conf_Intro"));
             yield return new WaitForSeconds(3);
             yield return new WaitForSeconds(am.play("Pris_Narr_Conf_Monologue"));
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(7); 
+            yield return new WaitForSeconds(am.play("Pris_Narr_Conf_Idle"));
+            yield return new WaitForSeconds(5);
             yield return new WaitForSeconds(am.play("Pris_Narr_Conf_End"));
             yield return new WaitForSeconds(3);
             currentlyInRoutine = false;

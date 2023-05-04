@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class RunnerPlayer : MonoBehaviour
 {
+    GroundAndObstacleSpawn gos;
     Rigidbody rb;
     Vector3 jumpHeight = new Vector3(0f,100f,0f);
     bool isGrounded = true;
+    int score = 0;
 
     // Start is called before the first frame update
     void Start()

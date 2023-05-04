@@ -1233,68 +1233,63 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: test
-    clip: {fileID: 8300000, guid: 0c50ce10124d3e541ab5f932c9a180ba, type: 3}
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
   - name: C2_Narr_First_Island_Intro
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: cd72862a4b477ea46a973eab74cc8fb7, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C2_Narr_First_Island_Moves
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: c1fc279914266e140b950b09952c4a3a, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C2_Narr_First_Island_Jumps25
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: cad47481aafbb9a419d3f900cbe9bdce, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C2_Narr_Falls_Off_First_Island
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 1d64a4f8f1b81b148864cda38456213a, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C2_Narr_Second_Island_Intro
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 826a5de2c47d74047a5cb1e0eebd67e8, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C2_Narr_20_Seconds_Elapsed
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: a2fb464ecb8b62141aac0773a18f3f38, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C2_Narr_Taking_To_Prison
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: f5bbacce47be8f54fa9f443f3cc351cf, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C2_Narr_Falls_Off_Second_Island
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 61bec40615b75694e8eef068561d090d, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C2_Narr_Room_Intro
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: dbf7e5aa824e0f24d80027919ed37be8, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C2_Narr_Nearly_Ready
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: fb85c05d19d176349ba9640d9b9e9c37, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C2_Narr_Invitation
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 7849583c434c322428a0833c9f650a00, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C2_Narr_Player_Hidden_Exit
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 0654ef3aa27212e49967556233dfc9e4, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}

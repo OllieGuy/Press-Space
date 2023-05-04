@@ -93,7 +93,6 @@ public class Chapter2Controller : MonoBehaviour
                 level++;
                 break;
             case 6:
-                Debug.Log("chapter 6");
                 if (player.transform.position.y < 0f)
                 {
                     StartCoroutine(playAndWaitToLevelUp("C2_Narr_Player_Hidden_Exit"));

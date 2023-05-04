@@ -398,32 +398,32 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
   - name: C3_Narr_Intro
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: aeecb2ffcf987934dad6a8e2fffc21bd, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C3_Narr_Instructions
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 6624f04b0faaf9b47a555aa70a57afdb, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C3_Narr_Plead
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: ea610dd2187f0004cbab2e4a99319957, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C3_Narr_Last_Chance
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: bf89d5059ff3f2a4f96cc7533302bf41, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C3_Narr_Thank
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: c11f646c0ca92b645b4db635774f0c09, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C3_Narr_Final_Monologue
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 1cc746845b4a321428bd856c1c74e202, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}

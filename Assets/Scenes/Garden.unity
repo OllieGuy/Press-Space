@@ -5108,32 +5108,32 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
   - name: Gard_Narr_Intro
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 194d647702b2a5f4f991fc77d03afec4, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Gard_Narr_Idle
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: f2de263b30d47204bb17dae2674f7500, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Gard_Narr_Idle_2
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 271f8ce00b93a7a4981e949af6753ef5, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Gard_Narr_Idle_3
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
-  - name: Gard_Narr_Sat
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 999bad2a0b779e641bc1b7bd8efb534a, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Gard_Narr_Monologue
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 822bcd056d7f60846b25b9daaf26c153, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Gard_Narr_Restarting
+    clip: {fileID: 8300000, guid: c3f4f94b5d34b3c4fa82be0d408f48f8, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}

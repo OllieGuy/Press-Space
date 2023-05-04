@@ -469,11 +469,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: test
-    clip: {fileID: 8300000, guid: 0c50ce10124d3e541ab5f932c9a180ba, type: 3}
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
   - name: C1_SFX_Buzzer
     clip: {fileID: 8300000, guid: 045d6773e041241458495ceeea396fa5, type: 3}
     volume: 0.4
@@ -485,47 +480,47 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
   - name: C1_Narr_Intro
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 4326d8bbab44e494da23355f45723de4, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C1_Narr_Correction_1
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 6fa424a2fa9d9674bb3b57b8dc786a2f, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C1_Narr_Correction_2
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 9962d89c6c581ed419a6aaffc6600c8b, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C1_Narr_Correction_3
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 60f5d218bc1cdc248bc5ba56713696fc, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C1_Narr_Puppies_Intro
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: f3830fd5fafde78488d7485250814d3b, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C1_Narr_Puppies_Fail
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 871483a0fcdb1084ca498c9839db3d99, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C1_Narr_Game_Ask
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 9670ba478a737e04e8168603cf3143c7, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C1_Narr_Game_Ask_Accept
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 5b8ae0e5c1746984bbbcc1099df8d4d2, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: C1_Narr_Game_Ask_Reject
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 5d960a537a248dc42915b38db82a2b1f, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}

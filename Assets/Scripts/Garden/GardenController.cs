@@ -49,9 +49,10 @@ public class GardenController : MonoBehaviour
     {
         if (!benchSitActive)
         {
-            yield return new WaitForSeconds(am.play("Gard_Narr_Sat"));
             yield return new WaitForSeconds(2.5f);
             yield return new WaitForSeconds(am.play("Gard_Narr_Monologue"));
+            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(am.play("Gard_Narr_Restarting"));
             yield return new WaitForSeconds(5f);
             SceneManager.LoadScene("Chapter 1");
         }

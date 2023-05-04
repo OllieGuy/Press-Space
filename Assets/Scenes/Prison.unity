@@ -1399,37 +1399,42 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
   - name: Pris_Narr_Intro
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 9bd788232607a9d469a81787d373ea66, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Pris_Narr_Idle
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: a3f9b3f366e7cad45b73447fc22d166d, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Pris_Narr_Leave_Cell
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 7e743e0aaece429458966613910cf3e6, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Pris_Narr_Enter_Bed
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 97c8e832fd560664984b2f3c86009ddc, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Pris_Narr_Conf_Intro
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 7183f930052658b438a49590919a20fb, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Pris_Narr_Conf_Monologue
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: b494504c782f3fb4582252aead7b0e54, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Pris_Narr_Conf_Idle
+    clip: {fileID: 8300000, guid: 00043bb0745845247b990a2e7b05c305, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Pris_Narr_Conf_End
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: aee9bdbff86ec964da626e8955a62142, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}

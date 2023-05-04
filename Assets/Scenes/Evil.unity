@@ -462,73 +462,78 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
+  - name: Evil_SFX_Ambience
+    clip: {fileID: 8300000, guid: 5fa2e22b11bbe914c9e67b5072fc5bc5, type: 3}
+    volume: 0.1
+    pitch: 1
+    source: {fileID: 0}
   - name: Evil_SFX_Ominous_Thud
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: eb7209f1f99952449adb129a1f71cace, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Evil_SFX_Crowd_Boo
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: b55ba81e7e7f873448a97ee66020ed97, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Evil_Narr_Intro
-    clip: {fileID: 8300000, guid: 045d6773e041241458495ceeea396fa5, type: 3}
+    clip: {fileID: 8300000, guid: b47d4f60174cf9d40a42f3c661ebe9fd, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Evil_Narr_Quip_1
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: b505e170678900e4d9e93851f0ad51f8, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Evil_Narr_Quip_2
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 9d3c3666009943e42abdcfc815a0446c, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Evil_Narr_Quip_3
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 0aa7585195772384b9d752f9a09d4fcb, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Evil_Narr_Quip_4
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 79a28a32bff793f4091a0360c3fb1fc3, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Evil_Narr_Quip_5
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 9e405d8e27182fe4798367002cf0660d, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Evil_Narr_Quip_6
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 881ddc22860583249978e7996711c736, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Evil_Narr_Quip_7
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 86e2a7267c22a1e42a17bf2fa06281d8, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Evil_Narr_Quip_8
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 2fb8cbc40acbd86499899ed6eab34b1f, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Evil_Narr_Quip_9
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: ba970036ca1f41c49a6c311515ce2cdd, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Evil_Narr_Quip_10
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: b8a7777862750354f9439738a9a9364c, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Evil_Narr_Reach250
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: e1bbbb375c897884fa6ad24d17b9f775, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
