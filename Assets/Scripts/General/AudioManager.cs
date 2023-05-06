@@ -28,6 +28,12 @@ public class AudioManager : MonoBehaviour
         return s.source.clip.length;
     }
 
+    public float returnLength(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        return s.source.clip.length;
+    }
+
     public void playOnLoop(string name, float offset)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
