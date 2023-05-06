@@ -6,24 +6,48 @@ public class RunnerPlayer : MonoBehaviour
 {
     GroundAndObstacleSpawn gos;
     Rigidbody rb;
-    Vector3 jumpHeight = new Vector3(0f,100f,0f);
+    Vector3 jumpHeight = new Vector3(0f,5000f,0f);
     bool isGrounded = true;
-    int score = 0;
+    bool pointWhenReachGround = false;
+    public int score = 0;
+    public GameObject counter;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        if (transform.position.y > 0.15)
+        {
+            isGrounded = false;
+        }
+        else
+        {
+            isGrounded = true;
+        }
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            Debug.Log("adtcc");
             rb.AddForce(jumpHeight);
-            //isGrounded = false;
+        }
+        if (isGrounded && pointWhenReachGround)
+        {
+            score++;
+            pointWhenReachGround = false;
+        }
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "KeyCollider")
+        {
+            score = 0;
+            pointWhenReachGround = false;
+        }
+        else if (col.gameObject.tag == "PointCollider" && !isGrounded)
+        {
+            pointWhenReachGround = true;
         }
     }
 }

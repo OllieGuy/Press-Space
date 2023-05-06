@@ -8,6 +8,8 @@ TagManager:
   - BenchTrigger
   - GardenTrigger
   - BedTrigger
+  - KeyCollider
+  - PointCollider
   layers:
   - Default
   - TransparentFX
