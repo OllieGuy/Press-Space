@@ -999,6 +999,11 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
+  - name: Game_SFX_Point
+    clip: {fileID: 8300000, guid: 7fe99eafb74f2a34bbcb586661fb236b, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
 --- !u!4 &1626139928
 Transform:
   m_ObjectHideFlags: 0
@@ -1084,6 +1089,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 578626268}
   am: {fileID: 1626139927}
+  explainedRandomDie: 0
+  explainedFirstFail: 0
+  diedForFirstTimeOnKey: 0
 --- !u!1 &1700361611
 GameObject:
   m_ObjectHideFlags: 0

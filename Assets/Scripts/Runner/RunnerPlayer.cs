@@ -63,6 +63,7 @@ public class RunnerPlayer : MonoBehaviour
         }
         else if (col.gameObject.tag == "PointCollider" && !isGrounded)
         {
+            am.play("Game_SFX_Point");
             pointWhenReachGround = true;
         }
     }

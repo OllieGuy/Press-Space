@@ -2126,7 +2126,7 @@ Light:
   m_Color: {r: 0.990566, g: 0.8580981, b: 0.4532307, a: 1}
   m_Intensity: 3
   m_Range: 7
-  m_SpotAngle: 140.7
+  m_SpotAngle: 140
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
@@ -2163,7 +2163,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -3103,7 +3103,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26244
+  m_Name: pb_Mesh36224
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3267,7 +3267,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3062
+  m_Name: pb_Mesh35928
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5836,7 +5836,7 @@ Light:
   m_Color: {r: 0.990566, g: 0.8580981, b: 0.4532307, a: 1}
   m_Intensity: 3
   m_Range: 7
-  m_SpotAngle: 140.7
+  m_SpotAngle: 140
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
@@ -5873,7 +5873,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -6383,7 +6383,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-13510
+  m_Name: pb_Mesh36092
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 public class Chapter2Controller : MonoBehaviour
 {
@@ -51,7 +50,7 @@ public class Chapter2Controller : MonoBehaviour
     {
         if (p3c.jumpCount >= 25 && level == 0)
         {
-            SceneManager.LoadScene("Job"); // REPLACE WITH SCENE
+            StartCoroutine(preparingQuestion()); // REPLACE WITH SCENE
         }
         switch (level)
         {
@@ -81,7 +80,7 @@ public class Chapter2Controller : MonoBehaviour
                 if (player.transform.position.y < 50f)
                 {
                     StopCoroutine(currentCoroutine);
-                    am.play("C2_Narr_Falls_Off_Second_Island");
+                    StartCoroutine(playAndWaitToLevelUp("C2_Narr_Falls_Off_Second_Island"));
                     level++;
                     p3c.enabled = false;
                     p1m.enabled = true;
@@ -146,7 +145,13 @@ public class Chapter2Controller : MonoBehaviour
             level++;
         }
     }
-
+    IEnumerator preparingQuestion()
+    {
+        p3c.enabled = false;
+        player.GetComponent<Rigidbody>().useGravity = false;
+        yield return new WaitForSeconds(am.play("C2_Narr_First_Island_Jumps25"));
+        SceneManager.LoadScene("Question");
+    }
     IEnumerator preparingPrison()
     {
         am.play("C2_Narr_Second_Island_Intro");

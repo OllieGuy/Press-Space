@@ -44,7 +44,7 @@ public class RunnerController : MonoBehaviour
                 rp.die();
             }
         }
-        if (rp.score >= 5 && !justWon)
+        if (rp.score >= 50 && !justWon)
         {
             justWon = true;
             StartCoroutine(win());

@@ -69,7 +69,7 @@ public class Chapter1Controller : MonoBehaviour
         switch (level)
         {
             case 0:
-                if (unacceptableKeyCounter % 5 == 1)
+                if (unacceptableKeyCounter % 5 == 1 && unacceptableKeyCounter / 5 >= levelReps)
                 {
                     if (levelReps < 3)
                     {

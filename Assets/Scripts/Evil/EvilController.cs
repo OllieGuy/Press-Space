@@ -65,7 +65,7 @@ public class EvilController : MonoBehaviour
                 levelUp(am.play("Evil_SFX_Ominous_Thud"));
                 break;
             case 2:
-                if (unacceptableKeyCounter % 10 == 1)
+                if (unacceptableKeyCounter % 10 == 1 && acceptableKeyCounter == 0)
                 {
                     System.Random rand = new System.Random();
                     int choice = rand.Next(0, 3);
