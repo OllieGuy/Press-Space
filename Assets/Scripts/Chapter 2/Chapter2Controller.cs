@@ -81,7 +81,6 @@ public class Chapter2Controller : MonoBehaviour
                 {
                     StopCoroutine(currentCoroutine);
                     StartCoroutine(playAndWaitToLevelUp("C2_Narr_Falls_Off_Second_Island"));
-                    level++;
                     p3c.enabled = false;
                     p1m.enabled = true;
                     SpawnInRoom();
