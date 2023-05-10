@@ -706,17 +706,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Ques_Narr_Intro
-    clip: {fileID: 8300000, guid: cd72862a4b477ea46a973eab74cc8fb7, type: 3}
+    clip: {fileID: 8300000, guid: 7b77ed22b8849b647850d2319c1a46c4, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Ques_Narr_Second
-    clip: {fileID: 8300000, guid: c1fc279914266e140b950b09952c4a3a, type: 3}
+    clip: {fileID: 8300000, guid: d0d9dc37242d71940b21e54b33847e26, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - name: Ques_Narr_Outro
-    clip: {fileID: 8300000, guid: cad47481aafbb9a419d3f900cbe9bdce, type: 3}
+    clip: {fileID: 8300000, guid: 469b1b92e56bfa64b8d09959d368e527, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}

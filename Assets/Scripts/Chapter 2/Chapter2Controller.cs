@@ -48,7 +48,7 @@ public class Chapter2Controller : MonoBehaviour
 
     void handleEvents()
     {
-        if (p3c.jumpCount >= 25 && level == 0)
+        if (p3c.jumpCount >= 25 && level <= 1)
         {
             StartCoroutine(preparingQuestion()); // REPLACE WITH SCENE
         }
@@ -81,12 +81,12 @@ public class Chapter2Controller : MonoBehaviour
                 {
                     StopCoroutine(currentCoroutine);
                     StartCoroutine(playAndWaitToLevelUp("C2_Narr_Falls_Off_Second_Island"));
-                    p3c.enabled = false;
-                    p1m.enabled = true;
-                    SpawnInRoom();
                 }
                 break;
             case 5:
+                p3c.enabled = false;
+                p1m.enabled = true;
+                SpawnInRoom();
                 StartCoroutine(preparingGarden());
                 level++;
                 break;
@@ -163,7 +163,7 @@ public class Chapter2Controller : MonoBehaviour
     }
     IEnumerator preparingGarden()
     {
-        am.play("C2_Narr_Room_Intro");
+        yield return new WaitForSeconds(am.play("C2_Narr_Room_Intro"));
         yield return new WaitForSeconds(15);
         am.play("C2_Narr_Nearly_Ready");
         yield return new WaitForSeconds(5);

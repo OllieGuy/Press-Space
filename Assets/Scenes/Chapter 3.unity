@@ -367,11 +367,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: test
-    clip: {fileID: 8300000, guid: 0c50ce10124d3e541ab5f932c9a180ba, type: 3}
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
   - name: C3_SFX_Computer_On
     clip: {fileID: 8300000, guid: 7ecda73095ccc7244960c63ddf815c76, type: 3}
     volume: 1
@@ -393,7 +388,12 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
   - name: C3_SFX_Step
-    clip: {fileID: 8300000, guid: 4a220f56b324223419aa198107af4444, type: 3}
+    clip: {fileID: 8300000, guid: 1de2041a66196a94e8ae7769176e3eb0, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: C3_SFX_Step2
+    clip: {fileID: 8300000, guid: 952b53ad67d5ad240b53002fc286b879, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}

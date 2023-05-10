@@ -46,17 +46,26 @@ public class Chapter3Controller : MonoBehaviour
                 break;
         }
     }
-
     IEnumerator footstepSounds()
     {
         float timer = 0;
         Vector3 prevPos = player.transform.position;
+        bool lr = false;
         while (true)
         {
             timer += Time.deltaTime;
             if (timer > 0.3f && Vector3.Distance(prevPos, player.transform.position) > 2)
             {
-                am.play("C3_SFX_Step");
+                if (!lr)
+                {
+                    am.play("C3_SFX_Step");
+                    lr = true;
+                }
+                else
+                {
+                    am.play("C3_SFX_Step2");
+                    lr = false;
+                }
                 prevPos = player.transform.position;
                 timer -= 0.3f;
             }
