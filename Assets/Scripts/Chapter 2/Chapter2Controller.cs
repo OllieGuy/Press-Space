@@ -95,7 +95,7 @@ public class Chapter2Controller : MonoBehaviour
                 {
                     StartCoroutine(playAndWaitToLevelUp("C2_Narr_Player_Hidden_Exit"));
                 }
-                if (ge.inRangeOfGarden && (player.transform.rotation.y > 0.9 || player.transform.position.y < 0.6))
+                if (ge.inRangeOfGarden) //&& (player.transform.rotation.y > 0.9 || player.transform.position.y < 0.6))
                 {
                     Debug.Log("prep garden");
                     if (spaceOnFrame)
